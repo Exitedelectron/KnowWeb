@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Scaricatore di PDF di KnowUnity</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Scaricatore di PDF di KnowUnity</h1>
+  <form id="urlForm" action="#">
+    <label for="url">URL :</label>
+    <input type="text" id="url" name="url" required>
+    <button type="submit">Scarica PDF!</button>
+  </form>
+
+  <div id="loading" style="display: none; text-align: center;">
+    <div id="loadingContent">
+      <img src="spinner.gif" alt="Caricamento" style="margin-bottom: 10px;">
+    </div>
+    <div id="loadingBar">
+      <progress id="progressBar" value="0" max="100"></progress>
+    </div>
+  </div>
+
+
+  <div id="downloadBtn" style="display: none;">
+    <button id="downloadButton" style="display: none; margin: 0 auto;">Scarica PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
