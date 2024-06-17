@@ -10,43 +10,49 @@
 </head>
 
 <body>
-    <header>
-        <h1>Servizi Belvecore</h1>
-        <nav>
-            <ul>
-                <li><a href="tool1.html">KnowLoader</a></li>
-                <li><a href="#">[Prossimamente]</a></li>
-                <li><a href="#">[Prossimamente]</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="wrapper">
+        <header>
+            <div class="header-left">
+                <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo"></a>
+                <h1>Belvecore</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="KnowLoader.html">KnowLoader</a></li>
+                    <li><a href="#">[Prossimamente]</a></li>
+                    <li><a href="#">[Prossimamente]</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section class="tools-container">
-            <div class="tool">
-                <h2>KnowLoader</h2>
-                <img src="images/tool1.gif" alt="KnowLoader Image" width="250px">
-                <p>Questo tool ti permette di scaricare gratuitamente i pdf di KnowUnity</p>
-                <a href="tool1.html" class="learn-more">Utilizzami</a>
-            </div>
-            <div class="tool">
-                <h2>Tool 2</h2>
-                <img src="placeholder.png" alt="Tool 2 Image">
-                <p>Description of Tool 2.</p>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-            <div class="tool">
-                <h2>Tool 3</h2>
-                <img src="placeholder.png" alt="Tool 3 Image">
-                <p>Description of Tool 3.</p>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Belvecore</p>
-    </footer>
+        <main class="content">
+            <section class="tools-container">
+                <div class="tool">
+                    <h2>KnowLoader</h2>
+                    <img src="images/tool1.gif" alt="KnowLoader Image" width="250px">
+                    <p>Questo tool ti permette di scaricare gratuitamente i pdf di KnowUnity</p>
+                    <a href="KnowLoader.html" class="learn-more">Utilizzami</a>
+                </div>
+                <div class="tool">
+                    <h2>Tool 2</h2>
+                    <img src="placeholder.png" alt="Tool 2 Image">
+                    <p>Description of Tool 2.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                <div class="tool">
+                    <h2>Tool 3</h2>
+                    <img src="placeholder.png" alt="Tool 3 Image">
+                    <p>Description of Tool 3.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Belvecore</p>
+        </footer>
+    </div>
 
     <style>
         body {
@@ -54,14 +60,42 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
         }
 
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px 0;
-            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        header img.logo {
+            margin-right: 20px;
+        }
+
+        header nav {
+            margin-left: 20px;
+        }
+
 
         nav ul {
             list-style: none;
@@ -78,6 +112,8 @@
         nav a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
         }
 
         main {
