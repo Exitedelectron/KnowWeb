@@ -64,38 +64,40 @@ main {
   padding: 20px;
 }
 
+.tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.tool {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.tool img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.learn-more {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
 footer {
   background-color: #333;
   color: white;
   padding: 10px 0;
   text-align: center;
-}
-
-fieldset {
-  text-align: center;
-  border-radius: 20px;
-  width: auto;
-  padding: 50px 50px 50px 50px;
-}
-
-#b_accedi {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-#auth_form input[type=text] {
-  border-radius: 5px;
-  border-color: lightgray;
-}
-
-#auth_form {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.hidden {
-  display: none;
 }

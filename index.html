@@ -18,44 +18,24 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="KnowLoader.html">KnowLoader</a></li>
-                    <li><a href="#">[Prossimamente]</a></li>
-                    <li><a href="#">[Prossimamente]</a></li>
+                    <li><a href="toolspage.html">Tools</a></li>
                 </ul>
             </nav>
         </header>
 
 
         <main class="content">
-            <section class="tools-container">
-                <div class="tool">
-                    <h2>KnowLoader</h2>
-                    <img src="images/tool1.gif" alt="KnowLoader Image" width="250px">
-                    <p>Questo tool ti permette di scaricare gratuitamente i pdf di KnowUnity</p>
-                    <a href="KnowLoader.html" class="learn-more">Utilizzami</a>
-                </div>
-                <div class="tool">
-                    <h2>[Prossimamente]</h2>
-                    <img src="images/lavori.gif" alt="Tool 2 Image">
-                    <p>Description of Tool 2.</p>
-                    <a href="https://www.youtube.com/watch?v=i8ju_10NkGY&ab_channel=LazyTown"
-                        class="learn-more">Utilizzami</a>
-                </div>
-                <div class="tool">
-                    <h2>[Prossimamente]</h2>
-                    <img src="images/lavori.gif" alt="Tool 3 Image">
-                    <p>Description of Tool 3.</p>
-                    <a href="https://www.youtube.com/watch?v=i8ju_10NkGY&ab_channel=LazyTowns"
-                        class="learn-more">Utilizzami</a>
-                </div>
-            </section>
             <div>
-                <h2>Disclaimer</h2>
-                <p>I contenuti e gli strumenti presenti in questa pagina web sono forniti esclusivamente a scopo
-                    educativo. Non ci assumiamo alcuna responsabilità per l'uso improprio o l'applicazione erronea di
-                    tali strumenti. È responsabilità dell'utente assicurarsi di utilizzare le informazioni e i tool in
-                    conformità con le leggi e le normative applicabili. L'uso di questi strumenti è a proprio rischio e
-                    pericolo.</p>
+                <fieldset id="auth_form">
+                    <h2>Inserisci le tue credenziali</h2>
+                    <label for="log_1">Nome utente:</label>
+                    <input type="text" id="log_1" placeholder="Scrivi il tuo username"> <br> <br>
+                    <label for="log_2">Password:</label>
+                    <input type="text" id="log_2" placeholder="Scrivi la tua password"> <br> <br>
+                    <button type="submit" onclick="accedi()" id="b_accedi">Accedi</button>
+                </fieldset>
+                <div id="successMessage" class="hidden">Login effettuato con successo!</div>
+
             </div>
         </main>
 
@@ -65,6 +45,7 @@
             </p>
         </footer>
     </div>
+    <script src="script/scriptmain.js"></script>
 </body>
 
 </html>
