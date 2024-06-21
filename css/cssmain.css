@@ -87,7 +87,7 @@ fieldset {
   font-size: 15px;
 }
 
-#auth_form input[type=text] {
+#auth_form input[type=number] {
   border-radius: 5px;
   border-color: lightgray;
 }
@@ -98,4 +98,47 @@ fieldset {
 
 .hidden {
   display: none;
+}
+
+.error {
+  border: 2px solid red;
+  background-color: lightcoral;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.warning {
+  border: 2px solid yellow;
+  background-color: lightyellow;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.success {
+  border: 2px solid green;
+  background-color: lightgreen;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 0.5s step-end 5;
 }

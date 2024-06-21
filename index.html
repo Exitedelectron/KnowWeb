@@ -25,18 +25,19 @@
 
 
         <main class="content">
-            <div>
-                <fieldset id="auth_form">
-                    <h2>Inserisci le tue credenziali</h2>
-                    <label for="log_1">Nome utente:</label>
-                    <input type="text" id="log_1" placeholder="Scrivi il tuo username"> <br> <br>
-                    <label for="log_2">Password:</label>
-                    <input type="text" id="log_2" placeholder="Scrivi la tua password"> <br> <br>
-                    <button type="submit" onclick="accedi()" id="b_accedi">Accedi</button>
-                </fieldset>
-                <div id="successMessage" class="hidden">Login effettuato con successo!</div>
 
+            <fieldset id="auth_form">
+                <div>
+                    <h2>Inserisci il tuo codice segreto</h2>
+                    <label for="log_1">Codice Univoco:</label>
+                    <input maxlength="5" type="number" id="cod_1" placeholder="Scrivi il tuo codice"> <br> <br>
+                    <button onclick="accedi()" id="b_accedi">Accedi</button>
+                </div>
+            </fieldset>
+            <div id="Message" class="hidden">
+                <p id="errorText"></p>
             </div>
+
         </main>
 
         <footer>
