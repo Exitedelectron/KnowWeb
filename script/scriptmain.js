@@ -3,10 +3,12 @@ function accedi() {
   const errorMessage = document.getElementById('Message');
   const errorText = document.getElementById('errorText');
 
-  errorMessage.className = 'hidden'; // Reset class list
+  errorMessage.className = 'hidden';
 
-  // Codici validi presi dal file JSON (simulazione di un carico locale)
-  const validCodes = ["12345", "54321"];
+  const validCodes = [
+    "98234", "67384", "76495", "34982", "29834",
+    "87439", "56428", "49387", "10583", "23764"
+  ];
 
   if (!code || code.length !== 5 || isNaN(code)) {
     if (code.length !== 5) {
@@ -17,8 +19,11 @@ function accedi() {
       errorMessage.classList.add('error');
     }
   } else if (validCodes.includes(code)) {
-    errorText.textContent = 'Accesso consentito!';
+    errorText.textContent = 'Accesso consentito! Aspetta 5 secondi!';
     errorMessage.classList.add('success');
+    setTimeout(() => {
+      window.location.href = `${code}.html`;
+    }, 3000);
   } else {
     errorText.textContent = 'Codice non valido.';
     errorMessage.classList.add('error');
@@ -27,8 +32,7 @@ function accedi() {
   errorMessage.classList.remove('hidden');
   errorMessage.classList.add('blink');
 
-  // Rimuovi l'animazione dopo il lampeggio
   setTimeout(() => {
     errorMessage.classList.remove('blink');
-  }, 3000); // 0.5s * 5 = 2.5s, aggiungiamo un po' di margine
+  }, 3000);
 }
